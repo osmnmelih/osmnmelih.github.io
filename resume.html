@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Osman Melih Cabik</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.2cm 1.5cm 1.2cm 1.5cm;
+        }
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #111;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .header h1 {
+            font-size: 22pt;
+            font-weight: normal;
+            margin: 0 0 4px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 10pt;
+            color: #333;
+            margin: 0 0 6px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 8.5pt;
+            color: #333;
+        }
+
+        .contact-info span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .contact-info span:not(:last-child)::after {
+            content: "•";
+            margin-left: 8px;
+            margin-right: 2px;
+            color: #666;
+        }
+
+        .contact-info a {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-icon {
+            width: 11px;
+            height: 11px;
+            vertical-align: middle;
+            margin-right: 3px;
+        }
+
+        .section {
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 12.5pt;
+            font-weight: bold;
+            text-transform: none;
+            margin: 0 0 6px 0;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #111;
+        }
+
+        .entry {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+
+        .entry-subtitle {
+            font-style: italic;
+            font-size: 9.5pt;
+            color: #222;
+            margin-bottom: 3px;
+        }
+
+        .entry-right-bold {
+            font-weight: bold;
+            font-size: 10pt;
+            text-align: right;
+        }
+
+        .entry-right-italic {
+            font-style: italic;
+            font-size: 9.5pt;
+            text-align: right;
+            color: #333;
+        }
+
+        .entry-details {
+            margin: 3px 0 0 0;
+            padding-left: 18px;
+            font-size: 9.5pt;
+            color: #333;
+            list-style-type: disc;
+        }
+
+        .entry-details li {
+            margin-bottom: 3px;
+            line-height: 1.35;
+        }
+
+        .skills-grid {
+            font-size: 9.5pt;
+            line-height: 1.45;
+        }
+
+        .skills-row {
+            margin-bottom: 5px;
+        }
+
+        .skills-label {
+            font-weight: bold;
+        }
+
+        .about-text {
+            font-size: 9.5pt;
+            line-height: 1.45;
+            color: #333;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Osman Melih Cabik</h1>
+        <div class="subtitle">Saarbrücken, Germany</div>
+        <div class="contact-info">
+            <span>Born: 25/02/2000</span>
+            <span>
+                <a href="mailto:osmanmelih.cabik@gmail.com">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    osmanmelih.cabik@gmail.com
+                </a>
+            </span>
+            <span>
+                <a href="https://osmnmelih.github.io" target="_blank">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    osmnmelih.github.io
+                </a>
+            </span>
+            <span>
+                <a href="https://www.linkedin.com/in/osmanmelihcabik/" target="_blank">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    osmanmelihcabik
+                </a>
+            </span>
+            <span>
+                <a href="https://github.com/osmnmelih" target="_blank">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    osmnmelih
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">About Me</div>
+        <div class="about-text">
+            I am a Technical Product Manager & Educational Technologist with 5+ years of experience steering cross-functional engineering teams and architecting data-driven digital learning products. Bridging software engineering with cognitive pedagogy, I specialize in technical product strategy, behavioral analytics, and interactive digital content creation. From automating platform architectures with Generative AI to building high-fidelity LMS environments, I translate complex system requirements into scalable, highly accessible user workflows.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Universität des Saarlandes</span>
+                <span class="entry-right-bold">Saarbrücken, Germany</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">M.Sc. Educational Technology — Current GPA: 1.7 / 1.0</span>
+                <span class="entry-right-italic">Oct 2025 – Present</span>
+            </div>
+            <ul class="entry-details">
+                <li><strong>Core Focus:</strong> Human-Computer Interaction (HCI), Digital Learning Management, Learning Analytics, Multimedia Instructional Design, and AI-enhanced learning scaffolds.</li>
+                <li><strong>Relevant Project Work:</strong> Developed interactive digital training formats and optimized multimedia learning environments with Articulate by applying advanced cognitive load balancing and behavioral analytics.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Istanbul University-Cerrahpasa</span>
+                <span class="entry-right-bold">Istanbul, Türkiye</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">Bachelor of Education in Preschool Teaching — Final Grade: 3.64 / 4.0 (~1.36 German Grade)</span>
+                <span class="entry-right-italic">Sep 2018 – Jun 2022</span>
+            </div>
+            <ul class="entry-details">
+                <li><strong>Core Focus:</strong> Instructional Design, Cognitive Processes in Education, Educational Media Creation, and Learner Agency.</li>
+                <li><strong>Thesis/Project:</strong> Educational Technology & Content Creation: Conceptualized and designed interactive, high-fidelity digital learning applications to streamline information processing and maximize knowledge retention with Camtasia and Adobe Premiere.</li>
+                <li><strong>Credits & Details:</strong> 240 ECTS credits. Official website: <a href="https://www.iuc.edu.tr" target="_blank">www.iuc.edu.tr</a>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Land of Chasers</span>
+                <span class="entry-right-bold">Ankara, Türkiye</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">Co-Founder, Product Lead & Instructional Designer</span>
+                <span class="entry-right-italic">Oct 2022 – Jan 2026</span>
+            </div>
+            <ul class="entry-details">
+                <li>Produced high-fidelity video tutorials, interactive learning assets, and multimedia content using Camtasia and Premiere Pro, significantly optimizing digital learning experiences and minimizing cognitive load.</li>
+                <li>Designed intuitive, user-centric learning journeys and interactive e-learning scaffolds by translating complex technical concepts into accessible digital materials.</li>
+                <li>Leveraged learning analytics and user feedback to engineer data-driven retention strategies, achieving a 30% increase in course completion and platform engagement through iterative UI/UX testing.</li>
+                <li>Analyzed user interaction patterns and navigation behavior within LMS environments to continuously optimize e-learning workflows and platform usability.</li>
+                <li>Project repository: <a href="https://github.com/osmnmelih/LandofChasers.git" target="_blank">github.com/osmnmelih/LandofChasers.git</a></li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Google - AI and Tech Academy</span>
+                <span class="entry-right-bold">Ankara, Türkiye</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">Product Owner & EdTech Specialist</span>
+                <span class="entry-right-italic">Nov 2022 – Jul 2023</span>
+            </div>
+            <ul class="entry-details">
+                <li>Designed and developed 'EduCon', an AI-integrated educational platform, optimizing digital learning paths and user engagement to maximize instructional effectiveness for learners and tutors.</li>
+                <li>Led the technical optimization and migration of digital learning assets and e-learning materials across platforms, ensuring LMS compatibility, pedagogical consistency, and high accessibility.</li>
+                <li>Optimized platform architecture and digital learning UX/UI through human-centered research and cognitive load analysis to enhance corporate educational solutions.</li>
+                <li>Managed the end-to-end development lifecycle of digital learning tools from concept to MVP, seamlessly integrating AI scaffolds to support modern learning processes.</li>
+                <li>Project repository: <a href="https://github.com/osmnmelih/EducationApp.git" target="_blank">github.com/osmnmelih/EducationApp.git</a></li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">ESSA (Virtual Home Classroom Platform)</span>
+                <span class="entry-right-bold">Istanbul, Türkiye</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">Co-Founder & E-Learning Developer / Instructional Designer</span>
+                <span class="entry-right-italic">Jan 2021 – Sep 2021</span>
+            </div>
+            <ul class="entry-details">
+                <li>Designed and deployed interactive training formats within LMS environments, managing multimedia assets and structuring digital e-learning modules for 1,000+ active users.</li>
+                <li>Developed multilingual e-learning scaffolds and interactive multimedia materials using Articulate 360, tailoring digital content to meet diverse corporate learning needs.</li>
+                <li>Spearheaded iterative UI/UX development and user testing, ensuring highly accessible, intuitive user interactions and workflows within digital learning spaces.</li>
+                <li>Leveraged gamification mechanics and learning analytics to optimize knowledge retention, bridging the gap between interactive content design and learning outcomes.</li>
+                <li>Recognized as an EdTech Finalist at TEKNOFEST 2021 for delivering innovative approaches to digital instructional design and remote e-learning infrastructure.</li>
+                <li>Social media profile & update: <a href="https://www.instagram.com/theessaofficial/" target="_blank">instagram.com/theessaofficial</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills & Languages</div>
+        <div class="skills-grid">
+            <div class="skills-row">
+                <span class="skills-label">Technical Skills:</span>
+                Articulate, Camtasia, Premiere Pro, LMS (Moodle, Stud.IP, Ilias), Digital Content Creation (Video/Audio), Figma, Instructional Design, Canva, Web Accessibility (WCAG 2.1, BITV 2.0), AI Chatbot Architecture, Learning Analytics, Generative AI, UI & UX, Agile development, Jira, Miro, Gamification, CSS & HTML, Python, TypeScript.
+            </div>
+            <div class="skills-row">
+                <span class="skills-label">Soft Skills:</span>
+                Cross-Functional Collaboration, Proactive problem solving, Team Leadership, Stakeholder Communication, Public Speaking, User-Centric Thinking.
+            </div>
+            <div class="skills-row">
+                <span class="skills-label">Languages:</span>
+                Turkish (Mother tongue), English (C1), German (B1).
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
