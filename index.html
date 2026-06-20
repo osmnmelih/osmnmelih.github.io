@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osman Melih Cabik | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        serif: ['Lora', 'Georgia', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        card: 'hsl(var(--card))',
+                        primary: 'hsl(var(--primary))',
+                        border: 'hsl(var(--border))',
+                        link: 'hsl(var(--color-link))',
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            /* Light Mode */
+            --background: 270 20% 98%;
+            --foreground: 270 30% 12%;
+            --card: 270 15% 100%;
+            --primary: 270 85% 60%;
+            --border: 270 15% 90%;
+            --color-link: 270 85% 50%;
+            --muted: 270 10% 95%;
+            --muted-foreground: 270 10% 45%;
+        }
+
+        .dark {
+            /* Morumsu Cyberpunk Dark Mode */
+            --background: 260 45% 4%; /* Deep rich violet-black #090615 */
+            --foreground: 260 10% 94%;
+            --card: 260 35% 8%; /* Container purple #130f26 */
+            --primary: 270 95% 75%; /* Glowing Violet-Purple */
+            --border: 260 30% 15%; /* Dark purple border #261d3f */
+            --color-link: 270 95% 75%;
+            --muted: 260 25% 11%;
+            --muted-foreground: 260 10% 70%;
+        }
+
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary/20 selection:text-primary">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background/80 glass-header border-b border-border/60 transition-colors duration-200">
+        <div class="max-w-5xl mx-auto px-6 flex items-center justify-between gap-4 h-14">
+            
+            <!-- Logo (Broken image icon hidden via onerror display none handler) -->
+            <button onclick="scrollToSection('bio')" class="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none" aria-label="Scroll to top">
+                <img src="profile.png" alt="" class="w-8 h-8 rounded-full object-cover border border-border/80" onerror="this.style.display='none';">
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="nav-menu" class="flex items-center gap-1 font-mono text-xs sm:text-sm">
+                <button data-sec="bio" onclick="scrollToSection('bio')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium transition-colors">Bio</button>
+                <button data-sec="projects" onclick="scrollToSection('projects')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Projects</button>
+                <button data-sec="experience" onclick="scrollToSection('experience')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Experience</button>
+                <button data-sec="education" onclick="scrollToSection('education')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Education</button>
+                <button data-sec="skills-section" onclick="scrollToSection('skills-section')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Skills</button>
+            </nav>
+
+            <!-- Theme Toggle Button -->
+            <button onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded border border-border bg-card text-foreground hover:border-link hover:text-link transition-colors focus:outline-none" aria-label="Toggle Theme">
+                <svg id="theme-icon-sun" class="w-4 h-4 hidden dark:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
+                <svg id="theme-icon-moon" class="w-4 h-4 block dark:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-24">
+        
+        <!-- Bio / Hero Section -->
+        <section id="bio" class="scroll-mt-20">
+            <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-start gap-8 md:gap-12">
+                
+                <!-- Bio Text -->
+                <div class="flex-1 space-y-6">
+                    <div class="space-y-3">
+                        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-foreground">
+                            Osman Melih Cabik
+                        </h1>
+                        <p class="text-base sm:text-lg text-link font-medium tracking-wide">
+                            Technical Product Manager & Educational Technologist
+                        </p>
+                        <p class="text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5 font-mono">
+                            <svg class="w-4 h-4 text-link" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Saarbrücken, Germany
+                        </p>
+                    </div>
+
+                    <!-- Parameter Matrix -->
+                    <div class="p-5 rounded-lg bg-card border border-border text-sm sm:text-base space-y-2.5 max-w-2xl">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-link font-mono text-xs font-bold">&gt;</span>
+                            <div><strong class="text-foreground font-semibold font-mono text-xs uppercase tracking-wide">Education:</strong> M.Sc. Educational Technology, Universität des Saarlandes</div>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-link font-mono text-xs font-bold">&gt;</span>
+                            <div><strong class="text-foreground font-semibold font-mono text-xs uppercase tracking-wide">Standing:</strong> Current GPA: 1.7 / 1.0</div>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-link font-mono text-xs font-bold">&gt;</span>
+                            <div><strong class="text-foreground font-semibold font-mono text-xs uppercase tracking-wide">Languages:</strong> English (C1), German (B1), Turkish (Native)</div>
+                        </div>
+                    </div>
+
+                    <!-- Social Buttons -->
+                    <div class="flex flex-wrap gap-2.5 pt-2">
+                        <a href="mailto:osmanmelih.cabik@gmail.com" aria-label="Email" title="Email" class="w-9 h-9 inline-flex items-center justify-center rounded border border-border bg-card text-foreground hover:border-link hover:text-link hover:scale-105 transition-all focus:outline-none shadow-sm">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/osmanmelihcabik/" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="w-9 h-9 inline-flex items-center justify-center rounded border border-border bg-card text-foreground hover:border-link hover:text-link hover:scale-105 transition-all focus:outline-none shadow-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/osmnmelih" target="_blank" aria-label="GitHub" title="GitHub" class="w-9 h-9 inline-flex items-center justify-center rounded border border-border bg-card text-foreground hover:border-link hover:text-link hover:scale-105 transition-all focus:outline-none shadow-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 px-4 items-center justify-center rounded border border-border bg-card text-foreground font-mono text-xs hover:border-link hover:text-link hover:scale-105 transition-all focus:outline-none shadow-sm">
+                            CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar Profile Photo Column -->
+                <div class="w-40 h-40 md:w-48 md:h-48 shrink-0 mx-auto md:mx-0">
+                    <div class="w-full h-full rounded-full overflow-hidden border border-border/80 bg-card shadow-sm">
+                        <img src="profile.png" alt="Osman Melih Cabik" class="w-full h-full object-cover" onerror="this.parentNode.style.display='none';">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="scroll-mt-20 border-t border-border pt-12">
+            <h2 class="text-2xl font-bold tracking-tight text-foreground mb-6 font-serif">About Me</h2>
+            <p class="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
+                I am a Technical Product Manager & Educational Technologist with 5+ years of experience steering cross-functional engineering teams and architecting data-driven digital learning products. Bridging software engineering with cognitive pedagogy, I specialize in technical product strategy, behavioral analytics, and interactive digital content creation. From automating platform architectures with Generative AI to building high-fidelity LMS environments, I translate complex system requirements into scalable, highly accessible user workflows.
+            </p>
+        </section>
+
+        <!-- Projects Section (Tabbed Logic & Publication Layout) -->
+        <section id="projects" class="scroll-mt-20 border-t border-border pt-12">
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-8">
+                <h2 class="text-2xl font-bold tracking-tight text-foreground font-serif">
+                    Interactive Project Showcases
+                </h2>
+                
+                <!-- Tab Switching System -->
+                <div class="flex gap-1 border border-border p-1 rounded bg-card self-start font-mono text-xs">
+                    <button id="tab-pm" onclick="switchTab('pm')" class="px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none">
+                        product-management
+                    </button>
+                    <button id="tab-edtech" onclick="switchTab('edtech')" class="px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none">
+                        edtech-modules
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Management Tab Panel -->
+            <div id="pm-content" class="space-y-6">
+                <!-- Case Study Card -->
+                <div class="group flex flex-col gap-5 border-b border-border py-6 md:flex-row md:gap-8">
+                    
+                    <!-- Paper/Case Study Thumbnail (Lightbox Trigger) -->
+                    <button onclick="openModal('modal-image-architecture')" class="group/thumb relative self-start shrink-0 w-full md:w-44 lg:w-48 aspect-[4/3] rounded overflow-hidden bg-white border border-border p-1 flex items-center justify-center cursor-pointer shadow-sm hover:border-foreground/25 transition-all focus:outline-none">
+                        <svg class="w-full h-full text-muted-foreground/30 p-2" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="1" />
+                            <path d="M12 6v12M6 12h12M6 6l12 12" />
+                        </svg>
+                        <span class="absolute inset-1 flex items-center justify-center bg-black/0 text-white opacity-0 transition-all group-hover/thumb:bg-black/30 group-hover/thumb:opacity-100 rounded">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m4-3H6"/></svg>
+                        </span>
+                    </button>
+
+                    <!-- Main Project Info -->
+                    <div class="min-w-0 flex-1 space-y-3.5">
+                        <div>
+                            <h3 class="text-lg font-bold leading-snug text-foreground">Case Study: EduCon (EducationApp) — Google AI Academy</h3>
+                            <p class="text-sm text-muted-foreground mt-1">
+                                <span class="font-bold text-foreground">Osman Melih Cabik</span>, Google AI Academy Tech Team &bull; <span class="italic text-link font-medium font-serif">Product Lead Initiative</span>
+                            </p>
+                            <p class="text-xs text-muted-foreground mt-0.5">Google AI Academy (2023)</p>
+                        </div>
+                        
+                        <p class="text-sm text-muted-foreground leading-relaxed">
+                            A deep dive into the technical architecture and product design of <strong>EduCon</strong>, a cross-platform application developed during the Google AI and Tech Academy. The product bridges advanced software development workflows with user-centered instructional delivery.
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                            <a href="https://github.com/osmnmelih/EducationApp" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
+                                Code
+                            </a>
+                            <button onclick="toggleAbstract('abstract-educon')" id="btn-abstract-educon" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
+                                Abs
+                            </button>
+                        </div>
+
+                        <!-- Abstract Expandable Content -->
+                        <div id="abstract-educon" class="hidden mt-3 rounded border border-border bg-card/65 p-5 text-sm leading-relaxed text-muted-foreground">
+                            <p class="font-bold text-foreground mb-2 flex items-center gap-1"><span class="text-link font-mono">//</span> System Architecture & Technical Integration Details:</p>
+                            <p class="mb-3">
+                                The EduCon platform was structured as a modern cross-platform application relying on Flutter's Declarative UI. We integrated strict MVVM state architecture to isolate local business logic from the view layer, reducing state leakage and improving widget redraw performance.
+                            </p>
+                            <p>
+                                The backend utilized Firebase Firestore with real-time listeners to stream updates to client devices, combined with custom Security Rules to protect user-generated education metrics. DevOps practices included automated CI/CD flows utilizing GitHub Actions to package Android artifacts on tag releases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EdTech Modules Tab Panel -->
+            <div id="edtech-content" class="space-y-12 hidden">
+                <!-- Figma Module -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-border pb-2">
+                        <h3 class="font-bold text-foreground text-lg font-serif">Advanced E-Learning Prototype: Figma Smart Animate</h3>
+                        <span class="text-xs font-mono text-muted-foreground">// Interactive Module</span>
+                    </div>
+                    <div class="embed-container border border-border bg-black rounded overflow-hidden shadow-sm">
+                        <iframe src="https://osmanmelih-cabik-elearningcontent.figma.site/" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+                        This high-fidelity interactive module demonstrates software accessibility standards using <strong>Figma Smart Animate</strong>. It focuses on smooth transitions, realistic user flows, and interactive storytelling to explain complex WCAG requirements in an engaging, video-like format.
+                    </p>
+                </div>
+
+                <!-- Genially Module -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-border pb-2">
+                        <h3 class="font-bold text-foreground text-lg font-serif">Interactive Museum of Personal Growth</h3>
+                        <span class="text-xs font-mono text-muted-foreground">// Gamified Module</span>
+                    </div>
+                    <div class="embed-container border border-border bg-black rounded overflow-hidden shadow-sm">
+                        <iframe src="https://view.genially.com/695d45c871a2d1841c50ba80" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+                        A gamified e-learning experience showcasing the translation of structural learning objectives into interactive "bite-sized" environments. It emphasizes fluid user navigation, engagement loops, and cognitive retention metrics through immersive multimedia design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="scroll-mt-20 border-t border-border pt-12">
+            <h2 class="text-2xl font-bold tracking-tight text-foreground mb-8 font-serif">
+                Work Experience
+            </h2>
+            <div class="space-y-8">
+                
+                <!-- Job 1 -->
+                <div class="group py-4 border-b border-border last:border-b-0 space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <h3 class="font-bold text-foreground text-base sm:text-lg">Technical Founder & Product Lead &mdash; Land of Chasers</h3>
+                        <span class="text-xs sm:text-sm font-mono text-muted-foreground">10/2022 - 01/2026</span>
+                    </div>
+                    <ul class="list-disc list-outside pl-4 text-sm text-muted-foreground space-y-1.5 leading-relaxed">
+                        <li>Led the end-to-end product lifecycle for an interactive gamified system, driving the technical roadmap and aligning it with international investor scales (WePlay Ventures, SKALE).</li>
+                        <li>Engineered data-driven user retention strategies using advanced behavioral analytics, successfully achieving a 30% increase in active user engagement.</li>
+                        <li>Oversaw software architecture using C++, Python, and TypeScript; automated data pipelines and core system logic.</li>
+                        <li>Produced high-fidelity video tutorials, interactive learning assets, and multimedia content using Camtasia and Premiere Pro to minimize cognitive load.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="group py-4 border-b border-border last:border-b-0 space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <h3 class="font-bold text-foreground text-base sm:text-lg">Technical Product Owner &mdash; Google AI Academy</h3>
+                        <span class="text-xs sm:text-sm font-mono text-muted-foreground">11/2022 - 07/2023</span>
+                    </div>
+                    <ul class="list-disc list-outside pl-4 text-sm text-muted-foreground space-y-1.5 leading-relaxed">
+                        <li>Led cross-functional engineering and design teams to deliver <strong>EduCon</strong>, an AI-integrated educational platform optimizing digital learning paths.</li>
+                        <li>Utilized Flutter framework and Firebase to architect scalable cross-platform solutions, optimizing data quality and system metrics.</li>
+                        <li>Managed the complete Agile sprint lifecycle (Miro/Jira/Confluence) from data conceptualization to the automated delivery of the MVP.</li>
+                        <li>Optimized platform architecture and e-learning UX/UI through human-centered research and cognitive load analysis to enhance instructional effectiveness.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="group py-4 border-b border-border last:border-b-0 space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <h3 class="font-bold text-foreground text-base sm:text-lg">Co-Founder & Instructional Designer &mdash; ESSA Classroom Platform</h3>
+                        <span class="text-xs sm:text-sm font-mono text-muted-foreground">01/2021 - 09/2021</span>
+                    </div>
+                    <ul class="list-disc list-outside pl-4 text-sm text-muted-foreground space-y-1.5 leading-relaxed">
+                        <li>Co-founded and scaled an AI-integrated digital platform to 1,000+ active users within 30 days, managing end-to-end product metrics and system environments.</li>
+                        <li>Developed multilingual e-learning scaffolds and interactive multimedia materials using Articulate 360, tailoring content to corporate and educational needs.</li>
+                        <li>Spearheaded iterative UI/UX development and user testing, ensuring highly accessible, intuitive user interactions and workflows within digital learning spaces.</li>
+                        <li>Recognized as an <strong>EdTech Finalist at TEKNOFEST 2021</strong> for delivering innovative approaches to digital instructional design and remote e-learning infrastructure.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="scroll-mt-20 border-t border-border pt-12">
+            <h2 class="text-2xl font-bold tracking-tight text-foreground mb-8 font-serif">
+                Education
+            </h2>
+            <div class="grid grid-cols-1 gap-6">
+                
+                <!-- School 1 -->
+                <div class="p-6 rounded-lg bg-card border border-border">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-bold text-foreground text-base">Universität des Saarlandes</h3>
+                        <span class="text-xs sm:text-sm font-mono text-muted-foreground">2025 - Present</span>
+                    </div>
+                    <div class="text-sm text-link font-medium italic mb-2.5 font-serif">M.Sc. in Educational Technology</div>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        Current GPA: 1.7/1.0 &bull; Focus on Learning Analytics, Affective AI, Multimodal Data Processing, and Human-Computer Interaction (HCI).
+                    </p>
+                </div>
+
+                <!-- School 2 -->
+                <div class="p-6 rounded-lg bg-card border border-border">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="font-bold text-foreground text-base">Istanbul University-Cerrahpasa</h3>
+                        <span class="text-xs sm:text-sm font-mono text-muted-foreground">2018 - 2022</span>
+                    </div>
+                    <div class="text-sm text-link font-medium italic mb-2.5 font-serif">Bachelor of Education in Preschool Teaching</div>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        Final Grade: 3.64/4.0 (~1.36 German Grade equivalency) &bull; Focus on interactive digital applications, cognitive load balancing, and behavioral UI/UX.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills & Competencies Section -->
+        <section id="skills-section" class="scroll-mt-20 border-t border-border pt-12">
+            <h2 class="text-2xl font-bold tracking-tight text-foreground mb-8 font-serif">
+                Skills & Competencies
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Technical Skills Column -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-muted-foreground font-mono flex items-center gap-1">
+                        <span class="text-link">//</span> Technical Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <!-- Product & Strategy -->
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Technical Product Strategy">Technical Product Strategy</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Product Management">Product Management</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Project Management">Project Management</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Agile & Scrum Methodologies">Agile & Scrum</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Agile Development">Agile Development</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Backlog Management">Backlog Management</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Roadmap Optimization">Roadmap Optimization</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Jira">Jira</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Confluence">Confluence</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Miro">Miro</span>
+                        
+                        <!-- Dev & Programming -->
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Python</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">TypeScript</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">C++</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Flutter</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Firebase</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Git</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">CSS & HTML</span>
+                        
+                        <!-- EdTech & E-Learning -->
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Instructional Design</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Articulate</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Camtasia</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Premiere Pro</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Canva</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">LMS (Moodle, Stud.IP, Ilias)</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Digital Content Creation</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Gamification</span>
+                        
+                        <!-- AI & Analytics -->
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Generative AI</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Learning Analytics</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">AI Chatbot Architecture</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Data Interpretation</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground" title="Data-Driven Decision Making (KPIs)">Data-Driven KPIs</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Power BI (Proficient)</span>
+                        
+                        <!-- UI/UX & Design -->
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">UI & UX</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Figma</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Web Accessibility (WCAG 2.1, BITV 2.0)</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Column -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-muted-foreground font-mono flex items-center gap-1">
+                        <span class="text-link">//</span> Soft Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Cross-Functional Collaboration</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Proactive Problem Solving</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Team Leadership</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Stakeholder Communication</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Stakeholder Relations</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Public Speaking</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">User-Centric Thinking</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Growth Strategy</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Partnership Management</span>
+                        <span class="px-2.5 py-1 text-xs font-mono rounded bg-muted text-foreground">Business Development</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Lightbox (Image popup overlay) -->
+    <div id="modal-image-architecture" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4 transition-all duration-200">
+        <div class="relative w-full max-w-4xl max-h-[90vh] bg-background border border-border rounded-lg p-3 sm:p-5 flex flex-col items-center justify-center shadow-2xl">
+            <button onclick="closeModal('modal-image-architecture')" class="absolute top-4 right-4 text-muted-foreground hover:text-foreground hover:scale-115 transition-all focus:outline-none">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="w-full flex items-center justify-center overflow-auto rounded bg-white p-4">
+                <svg class="max-h-[75vh] w-auto max-w-full text-slate-800" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="10" width="780" height="480" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+                    <text x="400" y="50" font-family="JetBrains Mono, monospace" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">EduCon System Architecture Diagram</text>
+                    
+                    <rect x="80" y="150" width="180" height="100" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                    <text x="170" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Flutter App Client</text>
+                    <text x="170" y="225" font-family="Inter, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Declarative UI Layer</text>
+
+                    <rect x="310" y="150" width="180" height="100" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                    <text x="400" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Firebase Core SDK</text>
+                    <text x="400" y="225" font-family="Inter, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Auth & Local Cache</text>
+
+                    <rect x="540" y="150" width="180" height="100" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                    <text x="630" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Cloud Firestore</text>
+                    <text x="630" y="225" font-family="Inter, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Realtime Sync Database</text>
+
+                    <path d="M 260 200 L 310 200" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow)"/>
+                    <path d="M 490 200 L 540 200" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow)"/>
+                    
+                    <defs>
+                        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-border/40 py-8 text-center text-xs text-muted-foreground font-mono transition-colors duration-200">
+        &copy; 2026 Osman Melih Cabik.
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Set initial theme based on localStorage or user system preferences
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Smooth scroll to sections
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Theme toggler
+        function toggleTheme() {
+            const root = document.documentElement;
+            if (root.classList.contains('dark')) {
+                root.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                root.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Project Showcases Tab Changer
+        function switchTab(tabId) {
+            const pmContent = document.getElementById('pm-content');
+            const edtechContent = document.getElementById('edtech-content');
+            const tabPm = document.getElementById('tab-pm');
+            const tabEdtech = document.getElementById('tab-edtech');
+
+            if (tabId === 'pm') {
+                pmContent.classList.remove('hidden');
+                edtechContent.classList.add('hidden');
+                
+                // Active button classes
+                tabPm.className = "px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none";
+                // Inactive button classes
+                tabEdtech.className = "px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
+            } else {
+                edtechContent.classList.remove('hidden');
+                pmContent.classList.add('hidden');
+                
+                // Active button classes
+                tabEdtech.className = "px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none";
+                // Inactive button classes
+                tabPm.className = "px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
+            }
+        }
+
+        // Abstract toggler for case studies
+        function toggleAbstract(id) {
+            const el = document.getElementById(id);
+            const btn = document.getElementById('btn-' + id);
+            if (el) {
+                if (el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                    if (btn) {
+                        btn.classList.add('!border-link', '!text-link');
+                    }
+                } else {
+                    el.classList.add('hidden');
+                    if (btn) {
+                        btn.classList.remove('!border-link', '!text-link');
+                    }
+                }
+            }
+        }
+
+        // Modal Lightbox controllers
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.remove('hidden');
+                el.classList.add('flex');
+            }
+        }
+
+        // Modal Lightbox closer
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('hidden');
+                el.classList.remove('flex');
+            }
+        }
+
+        // Dynamic Nav Link ScrollSpy (Highlights active section tag)
+        const sections = document.querySelectorAll("main > section");
+        const navBtns = document.querySelectorAll("#nav-menu .nav-btn");
+
+        window.addEventListener("scroll", () => {
+            let currentSecId = "bio";
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop;
+                if (window.scrollY >= secTop - 120) {
+                    currentSecId = sec.getAttribute("id");
+                }
+            });
+
+            navBtns.forEach(btn => {
+                const btnSec = btn.getAttribute("data-sec");
+                if (btnSec === currentSecId) {
+                    btn.className = "nav-btn px-2.5 py-1.5 rounded-md font-medium text-link bg-link/10 transition-colors";
+                } else {
+                    btn.className = "nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
