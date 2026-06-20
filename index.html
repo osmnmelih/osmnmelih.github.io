@@ -213,11 +213,11 @@
                 </h2>
                 
                 <!-- Tab Switching System -->
-                <div class="flex gap-1 border border-border p-1 rounded bg-card self-start font-mono text-xs">
-                    <button id="tab-pm" onclick="switchTab('pm')" class="px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none">
+                <div class="flex gap-2 border border-border p-1 rounded bg-card self-start font-mono text-sm">
+                    <button id="tab-pm" onclick="switchTab('pm')" class="px-5 py-2.5 font-bold rounded bg-muted text-foreground transition-all focus:outline-none">
                         product-management
                     </button>
-                    <button id="tab-edtech" onclick="switchTab('edtech')" class="px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none">
+                    <button id="tab-edtech" onclick="switchTab('edtech')" class="px-5 py-2.5 font-bold rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none">
                         edtech-modules
                     </button>
                 </div>
@@ -563,17 +563,17 @@
                 edtechContent.classList.add('hidden');
                 
                 // Active button classes
-                tabPm.className = "px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none";
+                tabPm.className = "px-5 py-2.5 font-bold rounded bg-muted text-foreground transition-all focus:outline-none";
                 // Inactive button classes
-                tabEdtech.className = "px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
+                tabEdtech.className = "px-5 py-2.5 font-bold rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
             } else {
                 edtechContent.classList.remove('hidden');
                 pmContent.classList.add('hidden');
                 
                 // Active button classes
-                tabEdtech.className = "px-3 py-1.5 font-medium rounded bg-muted text-foreground transition-all focus:outline-none";
+                tabEdtech.className = "px-5 py-2.5 font-bold rounded bg-muted text-foreground transition-all focus:outline-none";
                 // Inactive button classes
-                tabPm.className = "px-3 py-1.5 font-medium rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
+                tabPm.className = "px-5 py-2.5 font-bold rounded text-muted-foreground hover:text-foreground transition-all focus:outline-none";
             }
         }
 
