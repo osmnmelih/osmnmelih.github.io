@@ -212,43 +212,21 @@
             </h2>
 
             <div class="space-y-12">
-                <!-- Case Study: EduCon -->
-                <div class="group flex flex-col gap-5 border-b border-border pb-8 md:flex-row md:gap-8">
-                    <!-- Main Project Info -->
-                    <div class="min-w-0 flex-1 space-y-3.5">
-                        <div class="flex justify-between items-baseline border-b border-border pb-2 mb-2">
-                            <h3 class="font-bold text-foreground text-lg font-serif">Case Study: EduCon (EducationApp) — Google AI Academy</h3>
-                            <span class="text-xs font-mono text-muted-foreground">// Product Case Study</span>
-                        </div>
-                        <p class="text-sm text-muted-foreground mt-1">
-                            <span class="font-bold text-foreground">Osman Melih Cabik</span>, Google AI Academy Tech Team &bull; (2023)
-                        </p>
-                        
-                        <p class="text-sm text-muted-foreground leading-relaxed">
-                            A deep dive into the technical architecture and product design of <strong>EduCon</strong>, a cross-platform application developed during the Google AI and Tech Academy. The product bridges advanced software development workflows with user-centered instructional delivery.
-                        </p>
-                        
-                        <!-- Actions -->
-                        <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-                            <a href="https://github.com/osmnmelih/EducationApp" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
-                                Code
-                            </a>
-                            <button onclick="toggleAbstract('abstract-educon')" id="btn-abstract-educon" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
-                                Abstract
-                            </button>
-                        </div>
-
-                        <!-- Abstract Expandable Content -->
-                        <div id="abstract-educon" class="hidden mt-3 rounded border border-border bg-card/65 p-5 text-sm leading-relaxed text-muted-foreground">
-                            <p class="font-bold text-foreground mb-2 flex items-center gap-1"><span class="text-link font-mono">//</span> System Architecture & Technical Integration Details:</p>
-                            <p class="mb-3">
-                                The EduCon platform was structured as a modern cross-platform application relying on Flutter's Declarative UI. We integrated strict MVVM state architecture to isolate local business logic from the view layer, reducing state leakage and improving widget redraw performance.
-                            </p>
-                            <p>
-                                The backend utilized Firebase Firestore with real-time listeners to stream updates to client devices, combined with custom Security Rules to protect user-generated education metrics. DevOps practices included automated CI/CD flows utilizing GitHub Actions to package Android artifacts on tag releases.
-                            </p>
-                        </div>
+                <!-- Antigravity 2.0 AR Scavenger Hunt -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-border pb-2">
+                        <h3 class="font-bold text-foreground text-lg font-serif">Antigravity 2.0: GPS-Powered AR Scavenger Hunt</h3>
+                        <span class="text-xs font-mono text-muted-foreground">// Full-Stack AR Application</span>
                     </div>
+                    <!-- Actions -->
+                    <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                        <a href="https://github.com/osmnmelih/Antigravity-2.0" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
+                            Code
+                        </a>
+                    </div>
+                    <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+                        A full-stack, GPS-powered outdoor learning and physical education platform. Built with <strong>React 18</strong>, <strong>TailwindCSS</strong>, <strong>Supabase (PostgreSQL)</strong>, and <strong>Leaflet</strong>, it allows teachers to deploy missions with real-world map coordinates. Students navigate using a live AR camera overlay (HTML5 MediaDevices API) featuring a diegetic HUD, complete context-adaptive tasks, and compete in real time.
+                    </p>
                 </div>
 
                 <!-- Articulate Storyline Module -->
@@ -291,6 +269,45 @@
                     <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
                         A gamified e-learning experience showcasing the translation of structural learning objectives into interactive "bite-sized" environments. It emphasizes fluid user navigation, engagement loops, and cognitive retention metrics through immersive multimedia design.
                     </p>
+                </div>
+
+                <!-- Case Study: EduCon -->
+                <div class="group flex flex-col gap-5 border-b border-border pb-8 md:flex-row md:gap-8">
+                    <!-- Main Project Info -->
+                    <div class="min-w-0 flex-1 space-y-3.5">
+                        <div class="flex justify-between items-baseline border-b border-border pb-2 mb-2">
+                            <h3 class="font-bold text-foreground text-lg font-serif">Case Study: EduCon (EducationApp) — Google AI Academy</h3>
+                            <span class="text-xs font-mono text-muted-foreground">// Product Case Study</span>
+                        </div>
+                        <p class="text-sm text-muted-foreground mt-1">
+                            <span class="font-bold text-foreground">Osman Melih Cabik</span>, Google AI Academy Tech Team &bull; (2023)
+                        </p>
+                        
+                        <p class="text-sm text-muted-foreground leading-relaxed">
+                            A deep dive into the technical architecture and product design of <strong>EduCon</strong>, a cross-platform application developed during the Google AI and Tech Academy. The product bridges advanced software development workflows with user-centered instructional delivery.
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                            <a href="https://github.com/osmnmelih/EducationApp" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
+                                Code
+                            </a>
+                            <button onclick="toggleAbstract('abstract-educon')" id="btn-abstract-educon" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
+                                Abstract
+                            </button>
+                        </div>
+
+                        <!-- Abstract Expandable Content -->
+                        <div id="abstract-educon" class="hidden mt-3 rounded border border-border bg-card/65 p-5 text-sm leading-relaxed text-muted-foreground">
+                            <p class="font-bold text-foreground mb-2 flex items-center gap-1"><span class="text-link font-mono">//</span> System Architecture & Technical Integration Details:</p>
+                            <p class="mb-3">
+                                The EduCon platform was structured as a modern cross-platform application relying on Flutter's Declarative UI. We integrated strict MVVM state architecture to isolate local business logic from the view layer, reducing state leakage and improving widget redraw performance.
+                            </p>
+                            <p>
+                                The backend utilized Firebase Firestore with real-time listeners to stream updates to client devices, combined with custom Security Rules to protect user-generated education metrics. DevOps practices included automated CI/CD flows utilizing GitHub Actions to package Android artifacts on tag releases.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
