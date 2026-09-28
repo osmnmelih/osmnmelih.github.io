@@ -6,7 +6,7 @@
     <style>
         @page {
             size: A4;
-            margin: 1.2cm 1.5cm 1.2cm 1.5cm;
+            margin: 0.9cm 1.2cm 0.9cm 1.2cm;
         }
         @media print {
             body {
@@ -20,8 +20,8 @@
         
         body {
             font-family: "Georgia", "Times New Roman", Times, serif;
-            font-size: 10pt;
-            line-height: 1.4;
+            font-size: 8.8pt;
+            line-height: 1.32;
             color: #111;
             margin: 0;
             padding: 0;
@@ -38,28 +38,28 @@
 
         .header {
             text-align: center;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
         }
 
         .header h1 {
-            font-size: 22pt;
-            font-weight: normal;
-            margin: 0 0 4px 0;
-            letter-spacing: 0.5px;
+            font-size: 19pt;
+            font-weight: bold;
+            margin: 0 0 2px 0;
+            letter-spacing: 0.3px;
         }
 
         .header .subtitle {
-            font-size: 10pt;
+            font-size: 9pt;
             color: #333;
-            margin: 0 0 6px 0;
+            margin: 0 0 4px 0;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 6px;
-            font-size: 8.5pt;
+            gap: 4px;
+            font-size: 8pt;
             color: #333;
         }
 
@@ -70,7 +70,7 @@
 
         .contact-info span:not(:last-child)::after {
             content: "|";
-            margin-left: 8px;
+            margin-left: 6px;
             margin-right: 2px;
             color: #666;
         }
@@ -78,32 +78,33 @@
         .contact-info a {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
         }
 
         .contact-icon {
-            width: 11px;
-            height: 11px;
+            width: 10px;
+            height: 10px;
             vertical-align: middle;
-            margin-right: 3px;
+            margin-right: 2px;
         }
 
         .section {
-            margin-top: 16px;
-            margin-bottom: 8px;
+            margin-top: 9px;
+            margin-bottom: 4px;
         }
 
         .section-title {
-            font-size: 12.5pt;
+            font-size: 10.8pt;
             font-weight: bold;
-            text-transform: none;
-            margin: 0 0 6px 0;
-            padding-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 4px 0;
+            padding-bottom: 1px;
             border-bottom: 1px solid #111;
         }
 
         .entry {
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             page-break-inside: avoid;
         }
 
@@ -116,49 +117,49 @@
 
         .entry-title {
             font-weight: bold;
-            font-size: 10.5pt;
+            font-size: 9.2pt;
         }
 
         .entry-subtitle {
             font-style: italic;
-            font-size: 9.5pt;
+            font-size: 8.5pt;
             color: #222;
-            margin-bottom: 3px;
+            margin-bottom: 1px;
         }
 
         .entry-right-bold {
             font-weight: bold;
-            font-size: 10pt;
+            font-size: 8.8pt;
             text-align: right;
         }
 
         .entry-right-italic {
             font-style: italic;
-            font-size: 9.5pt;
+            font-size: 8.5pt;
             text-align: right;
             color: #333;
         }
 
         .entry-details {
-            margin: 3px 0 0 0;
-            padding-left: 18px;
-            font-size: 9.5pt;
-            color: #333;
+            margin: 1px 0 0 0;
+            padding-left: 14px;
+            font-size: 8.5pt;
+            color: #222;
             list-style-type: disc;
         }
 
         .entry-details li {
-            margin-bottom: 3px;
-            line-height: 1.35;
+            margin-bottom: 1.5px;
+            line-height: 1.28;
         }
 
         .skills-grid {
-            font-size: 9.5pt;
-            line-height: 1.45;
+            font-size: 8.5pt;
+            line-height: 1.35;
         }
 
         .skills-row {
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .skills-label {
@@ -166,9 +167,9 @@
         }
 
         .about-text {
-            font-size: 9.5pt;
-            line-height: 1.45;
-            color: #333;
+            font-size: 8.5pt;
+            line-height: 1.32;
+            color: #222;
             text-align: justify;
         }
     </style>
@@ -209,7 +210,7 @@
     <div class="section">
         <div class="section-title">About Me</div>
         <div class="about-text">
-            M.Sc. student in Educational Technology at Saarland University specializing in Human-Computer Interaction (HCI), C++ software development, and interactive 3D/simulation UI systems. Experienced in engineering real-time AR/GPS HUD interfaces, simulation game mechanics in Unreal Engine 5, and multi-platform software tools. Passionate about contributing software infrastructure, UI component optimization, and clean code practices to high-fidelity flight simulation systems.
+            M.Sc. student in Educational Technology at Saarland University specializing in Human-Computer Interaction (HCI), C++/C# software development, and interactive 3D/VR/AR simulation UI systems. Experienced in engineering real-time AR/GPS HUD interfaces, simulation game mechanics in Unreal Engine 5 &amp; Unity 3D (Meta XR SDK), and multi-platform software tools. Passionate about contributing XR software infrastructure, spatial interaction mechanics, and clean code practices to cutting-edge research projects.
         </div>
     </div>
 
@@ -226,7 +227,7 @@
                 <span class="entry-right-italic">Oct 2025 – Present</span>
             </div>
             <ul class="entry-details">
-                <li><strong>Core Focus:</strong> Human-Computer Interaction (HCI), Interactive Systems, Learning Analytics, Software UI Accessibility.</li>
+                <li><strong>Core Focus:</strong> Human-Computer Interaction (HCI), Interactive Systems, Spatial Learning Analytics, Software UI Accessibility.</li>
             </ul>
         </div>
 
@@ -246,7 +247,7 @@
     </div>
 
     <div class="section">
-        <div class="section-title">Experience</div>
+        <div class="section-title">Experience &amp; Academic Projects</div>
 
         <div class="entry">
             <div class="entry-header">
@@ -254,14 +255,42 @@
                 <span class="entry-right-bold">Ankara, Türkiye</span>
             </div>
             <div class="entry-header">
-                <span class="entry-subtitle">Founder &amp; Simulation UI / C++ Developer</span>
+                <span class="entry-subtitle">Founder &amp; Simulation UI / C++ &amp; Unity Developer</span>
                 <span class="entry-right-italic">Oct 2022 – Jan 2026</span>
             </div>
             <ul class="entry-details">
-                <li>Engineered interactive 3D simulation mechanics and microlearning games using <strong>C++</strong> and <strong>Unreal Engine 5</strong>, optimizing real-time rendering performance and UI responsiveness.</li>
-                <li>Designed and integrated cross-platform digital asset pipelines and user control interfaces, minimizing cognitive load through human-computer interaction (HCI) principles.</li>
-                <li>Applied modular software design patterns and version control (Git) to maintain scalable codebase architecture and user telemetry tracking.</li>
-                <li>Leveraged user interaction analytics to refine UI scaffolding and platform usability through iterative testing.</li>
+                <li>Engineered interactive 3D simulation mechanics and microlearning games using <strong>C++</strong>, <strong>Unreal Engine 5</strong>, and <strong>Unity 3D</strong>, optimizing real-time rendering performance and UI responsiveness.</li>
+                <li>Designed cross-platform digital asset pipelines and user control interfaces, applying HCI principles to minimize cognitive load during real-time 3D interaction.</li>
+                <li>Applied modular design patterns and version control (Git) to maintain scalable codebase architecture and user telemetry tracking.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Antigravity 2.0: GPS-Powered AR Scavenger Hunt</span>
+                <span class="entry-right-bold">Saarbrücken, Germany</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">AR Software &amp; UI Developer (Dr. Kristin Altmeyer's Course Project)</span>
+                <span class="entry-right-italic">2025</span>
+            </div>
+            <ul class="entry-details">
+                <li>Developed a full-stack, GPS-powered outdoor AR learning platform utilizing <strong>React 18</strong>, <strong>Leaflet</strong>, and <strong>HTML5 MediaDevices API</strong> for real-world coordinate tracking.</li>
+                <li>Engineered a live AR camera overlay with diegetic HUD interfaces, context-adaptive tasks, and real-time student leaderboard mechanics.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">AI-Supported Interactive 3D VR Spatial Representation System</span>
+                <span class="entry-right-bold">Saarbrücken, Germany</span>
+            </div>
+            <div class="entry-header">
+                <span class="entry-subtitle">VR / XR Systems Developer</span>
+                <span class="entry-right-italic">2025</span>
+            </div>
+            <ul class="entry-details">
+                <li>Designed an interactive 3D spatial geometry &amp; interaction framework using <strong>Unity 3D</strong>, <strong>Meta XR SDK (OpenXR)</strong>, and <strong>SymPy</strong> for real-time spatial manipulation.</li>
             </ul>
         </div>
 
@@ -271,13 +300,11 @@
                 <span class="entry-right-bold">Ankara, Türkiye</span>
             </div>
             <div class="entry-header">
-                <span class="entry-subtitle">Product Owner Trainee</span>
+                <span class="entry-subtitle">Product Owner Trainee &amp; Cross-Platform Developer</span>
                 <span class="entry-right-italic">Nov 2022 – Jul 2023</span>
             </div>
             <ul class="entry-details">
-                <li>Supported cross-functional engineering teams in building cross-platform software applications using <strong>Flutter</strong> and <strong>Firebase</strong>.</li>
-                <li>Facilitated Agile/Scrum workflows, sprint planning, backlog prioritization, and technical review sessions for digital platform architecture.</li>
-                <li>Conducted UI/UX usability reviews, system mapping, and accessibility verification for digital tools.</li>
+                <li>Co-developed EduCon EdTech mobile platform (**Flutter**, **Firebase**), leading Agile/Scrum sprints, backlog prioritization, and UI/UX usability reviews.</li>
             </ul>
         </div>
 
@@ -291,9 +318,7 @@
                 <span class="entry-right-italic">Jan 2021 – Sep 2021</span>
             </div>
             <ul class="entry-details">
-                <li>Developed interactive digital modules and user-facing e-learning interfaces serving 1,000+ active users.</li>
-                <li>Collaborated closely with educational stakeholders and developers to align functional objectives with interactive UI mechanics.</li>
-                <li>Recognized as an EdTech Finalist at TEKNOFEST 2021 for delivering innovative educational software infrastructure.</li>
+                <li>Developed interactive digital learning interfaces serving 1,000+ active users; recognized as EdTech Finalist at <strong>TEKNOFEST 2021</strong>.</li>
             </ul>
         </div>
     </div>
@@ -303,11 +328,11 @@
         <div class="skills-grid">
             <div class="skills-row">
                 <span class="skills-label">Programming &amp; UI Frameworks:</span>
-                C++, Python, TypeScript, Flutter, HTML/CSS, Qt/QML (Basics), C#.
+                C#, C++, Python, TypeScript, Flutter, HTML/CSS, Qt/QML (Basics).
             </div>
             <div class="skills-row">
-                <span class="skills-label">Simulation, AR &amp; UI Tools:</span>
-                Unreal Engine 5, AR/VR (MediaDevices API), Leaflet Maps, Figma, UI/UX Systems, Articulate Storyline.
+                <span class="skills-label">VR, AR &amp; Simulation Tools:</span>
+                Unity 3D (Meta XR SDK, OpenXR, Hand Tracking), Unreal Engine 5, Antigravity 2.0 AR, MediaDevices API, Leaflet Maps, Figma, Articulate Storyline.
             </div>
             <div class="skills-row">
                 <span class="skills-label">Infrastructure &amp; DevOps:</span>
