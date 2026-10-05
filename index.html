@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osman Melih Cabik</title>
 
+    <meta name="description" content="Osman Melih Cabik - Portfolio. M.Sc. Educational Technology &amp; HCI Specialist specializing in 3D Simulation, Unreal Engine 5 (C++), Unity 3D (Meta XR), and AR/VR development.">
+    <meta property="og:title" content="Osman Melih Cabik | 3D Simulation &amp; AR/VR Developer">
+    <meta property="og:description" content="Portfolio of Osman Melih Cabik. Educational Technologist &amp; HCI Specialist focusing on UE5, Unity 3D, Meta XR SDK, and Spatial Computing.">
+    <meta property="og:image" content="profile.png">
+    <meta property="og:url" content="https://osmnmelih.github.io">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,8 +116,10 @@
 
             <!-- Navigation Links -->
             <nav id="nav-menu" class="flex items-center gap-1 font-mono text-xs sm:text-sm">
-                <button data-sec="bio" onclick="scrollToSection('bio')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium transition-colors">Bio</button>
-                <button data-sec="projects" onclick="scrollToSection('projects')" class="nav-btn px-2.5 py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Projects</button>
+                <button data-sec="bio" onclick="scrollToSection('bio')" class="nav-btn px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-md font-medium transition-colors">Bio</button>
+                <button data-sec="about" onclick="scrollToSection('about')" class="nav-btn px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">About</button>
+                <button data-sec="skills" onclick="scrollToSection('skills')" class="nav-btn px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Skills</button>
+                <button data-sec="projects" onclick="scrollToSection('projects')" class="nav-btn px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-md font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">Projects</button>
             </nav>
 
             <!-- Theme Toggle Button -->
@@ -222,6 +233,67 @@
             </div>
         </section>
 
+        <!-- Skills & Technologies Matrix Section -->
+        <section id="skills" class="scroll-mt-20 border-t border-border pt-12">
+            <h2 class="text-2xl font-bold tracking-tight text-foreground mb-6 font-serif">Skills &amp; Technologies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 1. Programming & Systems -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-3 shadow-sm">
+                    <h3 class="text-sm font-semibold font-mono text-link uppercase tracking-wider">// Programming &amp; Systems</h3>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">C++ (UE5 API)</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">C# (.NET)</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">JavaScript (ES6+)</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">TypeScript</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Python</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Dart</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">HTML5 / CSS3 / Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- 2. XR & Simulation -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-3 shadow-sm">
+                    <h3 class="text-sm font-semibold font-mono text-link uppercase tracking-wider">// XR &amp; 3D Simulation</h3>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Unreal Engine 5</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Unity 3D</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Meta XR SDK</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">OpenXR</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Niagara VFX</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Spatial Audio &amp; Hand Tracking</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">GPS / Location AR</span>
+                    </div>
+                </div>
+
+                <!-- 3. HCI & Didactics -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-3 shadow-sm">
+                    <h3 class="text-sm font-semibold font-mono text-link uppercase tracking-wider">// HCI &amp; Educational Design</h3>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Human-Computer Interaction (HCI)</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Instructional Design</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Figma Smart Animate</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Articulate Storyline</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">WCAG &amp; Accessibility</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Usability Testing</span>
+                    </div>
+                </div>
+
+                <!-- 4. Backend & Infrastructure -->
+                <div class="p-5 rounded-lg bg-card border border-border space-y-3 shadow-sm">
+                    <h3 class="text-sm font-semibold font-mono text-link uppercase tracking-wider">// Backend &amp; Tools</h3>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">React 18</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Flutter</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Supabase (PostgreSQL)</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Firebase / Firestore</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">Git &amp; GitHub Actions</span>
+                        <span class="px-2.5 py-1 rounded bg-muted border border-border text-foreground">REST &amp; Real-Time Streams</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="scroll-mt-20 border-t border-border pt-12">
             <h2 class="text-2xl font-bold tracking-tight text-foreground mb-8 font-serif">
@@ -235,6 +307,15 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">Land of Chasers: UE5 3D Microlearning &amp; Simulation Game</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Unreal Engine 5 &amp; C++ Simulation</span>
                     </div>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Unreal Engine 5</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">C++</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Niagara VFX</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">3D Physics Simulation</span>
+                    </div>
+
                     <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
                         A 3D gamified microlearning and simulation platform engineered with <strong>Unreal Engine 5</strong> and <strong>C++</strong>. Designed with custom HUD interfaces, real-time Niagara particle effects (VFX), and object-oriented physics mechanics, it translates complex educational content into engaging, high-performance interactive 3D environments.
                     </p>
@@ -262,6 +343,21 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">Antigravity 2.0: GPS-Powered AR Scavenger Hunt</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Full-Stack AR Application</span>
                     </div>
+
+                    <!-- Academic Reference -->
+                    <p class="text-xs font-mono text-link font-medium">
+                        &bull; Universität des Saarlandes — Dr. Kristin Altmeyer's Course Project
+                    </p>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">React 18</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">TailwindCSS</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Supabase (PostgreSQL)</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Leaflet Maps</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">WebAR / MediaDevices</span>
+                    </div>
+
                     <!-- Actions -->
                     <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
                         <a href="https://github.com/osmnmelih/Antigravity-2.0" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
@@ -272,7 +368,7 @@
                         </a>
                     </div>
                     <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
-                        A full-stack, GPS-powered outdoor learning and physical education platform. Built with <strong>React 18</strong>, <strong>TailwindCSS</strong>, <strong>Supabase (PostgreSQL)</strong>, and <strong>Leaflet</strong>, it allows teachers to deploy missions with real-world map coordinates. Students navigate using a live AR camera overlay (HTML5 MediaDevices API) featuring a diegetic HUD, complete context-adaptive tasks, and compete in real time.
+                        A full-stack, GPS-powered outdoor learning and physical education platform developed at <strong>Universität des Saarlandes</strong> for <strong>Dr. Kristin Altmeyer's course project</strong>. Built with <strong>React 18</strong>, <strong>TailwindCSS</strong>, <strong>Supabase (PostgreSQL)</strong>, and <strong>Leaflet</strong>, it allows teachers to deploy missions with real-world map coordinates. Students navigate using a live AR camera overlay (HTML5 MediaDevices API) featuring a diegetic HUD, complete context-adaptive tasks, and compete in real time.
                     </p>
                     
                     <!-- Screenshots Gallery -->
@@ -298,6 +394,14 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">Ace Your Interview: Interactive Articulate Storyline Module</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Articulate Storyline Module</span>
                     </div>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Articulate Storyline 360</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Instructional Design</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Branching Scenarios</span>
+                    </div>
+
                     <div class="embed-container border border-border bg-black rounded overflow-hidden shadow-sm">
                         <iframe src="ace-your-interview/story.html" allowfullscreen></iframe>
                     </div>
@@ -312,6 +416,14 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">Advanced E-Learning Prototype: Figma Smart Animate</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Figma Animation Module</span>
                     </div>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Figma Smart Animate</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">HCI &amp; Accessibility</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">WCAG Standards</span>
+                    </div>
+
                     <div class="embed-container border border-border bg-black rounded overflow-hidden shadow-sm">
                         <iframe src="https://osmanmelih-cabik-elearningcontent.figma.site/" allowfullscreen></iframe>
                     </div>
@@ -326,6 +438,14 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">Interactive Museum of Personal Growth</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Gamified Genially Module</span>
                     </div>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Genially</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Gamification</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Microlearning</span>
+                    </div>
+
                     <div class="embed-container border border-border bg-black rounded overflow-hidden shadow-sm">
                         <iframe src="https://view.genially.com/695d45c871a2d1841c50ba80" allowfullscreen></iframe>
                     </div>
@@ -340,6 +460,14 @@
                         <h3 class="font-bold text-foreground text-lg font-serif">EduCon: Cross-Platform EdTech Mobile App — Google AI &amp; Tech Academy</h3>
                         <span class="text-xs font-mono text-muted-foreground">// Flutter &amp; Firebase Mobile App</span>
                     </div>
+
+                        <!-- Tech Badges -->
+                        <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                            <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Flutter</span>
+                            <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Firebase / Firestore</span>
+                            <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Dart</span>
+                            <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Google AI &amp; Tech Academy</span>
+                        </div>
                         <p class="text-sm text-muted-foreground mt-1">
                             <span class="font-bold text-foreground">Osman Melih Cabik</span>, Product Owner &amp; Google AI Academy Tech Team &bull; (2023)
                         </p>
