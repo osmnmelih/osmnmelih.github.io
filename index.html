@@ -341,34 +341,80 @@
                     </div>
                 </div>
 
-                <!-- Antigravity 2.0 & Campus AR Scavenger Hunt -->
+                <!-- UdS EduTech Campus Orientation Scavenger Hunt -->
                 <div class="space-y-4">
                     <div class="flex justify-between items-baseline border-b border-border pb-2">
-                        <h3 class="font-bold text-foreground text-lg font-serif">Campus AR Scavenger Hunt &amp; Antigravity 2.0</h3>
-                        <span class="text-xs font-mono text-muted-foreground">// Full-Stack AR &amp; Campus Orientation System</span>
+                        <h3 class="font-bold text-foreground text-lg font-serif">EduTech Campus Orientation: GPS Scavenger Hunt</h3>
+                        <span class="text-xs font-mono text-muted-foreground">// Campus Exploration &amp; Onboarding Platform</span>
                     </div>
 
                     <!-- Academic Reference -->
                     <p class="text-xs font-mono text-link font-medium">
-                        &bull; Universität des Saarlandes — Dr. Kristin Altmeyer's Course &bull; Official Master's Orientation Platform &bull; Showcased at XR Education Day
+                        &bull; Universität des Saarlandes — Official M.Sc. Educational Technology Orientation Day (Winter Semester 2026/27)
                     </p>
 
                     <!-- Tech Badges -->
                     <div class="flex flex-wrap gap-1.5 font-mono text-xs">
                         <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">React 18</span>
                         <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">TanStack Start / Router</span>
-                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">TailwindCSS</span>
                         <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Supabase (PostgreSQL)</span>
                         <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Leaflet Maps</span>
-                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">WebAR / MediaDevices</span>
-                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">QR Auto-Routing</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">HTML5 Geolocation</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Camera Proof Verification</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Live Admin Cockpit</span>
                     </div>
 
                     <!-- Actions -->
                     <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
                         <a href="https://github.com/osmnmelih/edutech-orientation-scavenger-hunt" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
-                            Code (Campus Hunt)
+                            Code (Repository)
                         </a>
+                    </div>
+                    <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+                        A full-stack, GPS-powered location-based learning and campus exploration platform engineered specifically for the official <strong>M.Sc. Educational Technology Orientation Day</strong> at <strong>Universität des Saarlandes</strong>. Designed to welcome incoming graduate students through an active, collaborative discovery quest, student teams scan poster QR codes to launch physical missions navigating to university landmarks including the <strong>Innovation Center (Building A2 1)</strong>, <strong>DFKI — AI Research Center (Building D3 2)</strong>, and the <strong>Mensa (Building D4 1)</strong>. Features sub-meter Haversine distance tracking, compass bearings, in-browser camera verification (MediaDevices API), and a centralized live session monitor dashboard for orientation organizers.
+                    </p>
+                    
+                    <!-- Screenshots Gallery -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <div class="rounded-lg border border-border overflow-hidden bg-muted shadow-sm hover:border-link transition-colors duration-200">
+                            <img src="edutech_orientation_qr.png" alt="Campus Station QR Code Check-in Poster" onclick="openImageLightbox('orientation', 0)" class="w-full h-48 object-contain p-4 bg-[#0a0f1d] cursor-pointer hover:opacity-90 hover:scale-[1.02] transition-all">
+                            <div class="p-2.5 bg-card/65 border-t border-border">
+                                <span class="text-xs font-semibold text-foreground font-serif">Campus Station QR Code Check-in Poster</span>
+                            </div>
+                        </div>
+                        <div class="rounded-lg border border-border overflow-hidden bg-muted shadow-sm hover:border-link transition-colors duration-200">
+                            <img src="dashboard.png" alt="Mission Control Dashboard" onclick="openImageLightbox('orientation', 1)" class="w-full h-48 object-cover cursor-pointer hover:opacity-90 hover:scale-[1.02] transition-all">
+                            <div class="p-2.5 bg-card/65 border-t border-border">
+                                <span class="text-xs font-semibold text-foreground font-serif">Mission Control Dashboard &amp; Live Telemetry</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Antigravity 2.0 AR Scavenger Hunt -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-baseline border-b border-border pb-2">
+                        <h3 class="font-bold text-foreground text-lg font-serif">Antigravity 2.0: GPS-Powered AR Scavenger Hunt</h3>
+                        <span class="text-xs font-mono text-muted-foreground">// Gamified Physical Education &amp; Endurance Training Platform</span>
+                    </div>
+
+                    <!-- Academic Reference -->
+                    <p class="text-xs font-mono text-link font-medium">
+                        &bull; Universität des Saarlandes — Dr. Kristin Altmeyer's Course Project
+                    </p>
+
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">React 18</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">TailwindCSS</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Supabase (PostgreSQL)</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Leaflet Maps</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">WebAR / MediaDevices</span>
+                        <span class="px-2 py-0.5 rounded bg-muted border border-border text-foreground/90 font-medium">Diegetic Cockpit HUD</span>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
                         <a href="https://github.com/osmnmelih/antigravity-2.0" target="_blank" class="inline-flex h-7 items-center rounded border border-border bg-background px-3 text-foreground hover:border-link hover:text-link transition-colors focus:outline-none">
                             Code (Engine)
                         </a>
@@ -377,7 +423,7 @@
                         </a>
                     </div>
                     <p class="text-sm text-muted-foreground leading-relaxed max-w-3xl">
-                        A full-stack, GPS-powered outdoor learning platform engineered at <strong>Universität des Saarlandes</strong>. Deployed for the official <strong>2026 M.Sc. Educational Technology orientation</strong> across the Saarbrücken campus (featuring interactive routes through the Innovation Center, DFKI AI Research Center, and Mensa) and demonstrated to researchers at the <strong>XR Education Day</strong>. Built with <strong>React 18</strong>, <strong>TanStack</strong>, <strong>Supabase</strong>, and <strong>Leaflet</strong>, it features real-time Haversine distance tracking, compass bearing calculations, a live AR camera overlay (HTML5 MediaDevices API) with a diegetic cockpit HUD, and a real-time instructor telemetry dashboard.
+                        A full-stack, GPS-powered outdoor learning and endurance training application developed for <strong>Dr. Kristin Altmeyer's course project</strong> at <strong>Universität des Saarlandes</strong>. Designed to gamify physical education and outdoor running, it allows instructors to configure missions with real-world map coordinates. Students navigate using a live AR camera overlay (HTML5 MediaDevices API) featuring a diegetic cockpit HUD, complete context-adaptive tasks, and compete on live leaderboards.
                     </p>
                     
                     <!-- Screenshots Gallery -->
@@ -585,6 +631,10 @@
             'loc': [
                 { src: 'loc_1.png', caption: 'UE5 3D Environment & Custom HUD' },
                 { src: 'loc_2.png', caption: 'Real-Time VFX & Interaction Mechanics' }
+            ],
+            'orientation': [
+                { src: 'edutech_orientation_qr.png', caption: 'Campus Station QR Code Check-in Poster' },
+                { src: 'dashboard.png', caption: 'Mission Control Dashboard & Live Telemetry' }
             ],
             'antigravity': [
                 { src: 'logo.png', caption: 'Antigravity 2.0 Branding Logo' },
