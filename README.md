@@ -11,8 +11,6 @@ Personal portfolio website showcasing software development, spatial computing, s
 .
 ├── assets/
 │   └── images/                # Visual media, project captures, profile assets, and favicons
-├── modules/
-│   └── ace-your-interview/    # Interactive Articulate Storyline web runtime module
 ├── index.html                 # Main portfolio single-page application
 ├── resume.html                # Digital web resume
 ├── resume.pdf                 # Printable CV / Resume document
